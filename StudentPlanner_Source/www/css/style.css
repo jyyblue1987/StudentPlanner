@@ -36,3 +36,7 @@ a.tab-item.active {
   line-height: 60px;
   cursor: pointer;
 }
+
+.margin-top {
+  margin-top: 6px;
+}

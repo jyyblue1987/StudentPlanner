@@ -1,0 +1,60 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+  </div>
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">REGISTER AS TEACHER</h4>
+
+    <div class="text-center" style="margin-top: 40px">
+      <div class="div_center" style="width: 80%">
+        <select class='form-control' ng-model="report_type">
+          <option value="">School</option>
+          <option>Cambridge</option>
+          <option>Carmel</option>
+        </select>
+        <input class="form-control input-sm margin-top" placeholder="Full Name">
+        <textarea class="form-control input-sm margin-top" placeholder="Address"></textarea>
+        <div class="margin-top" style="position: relative">
+          <div class="col-xs-6" style="padding-left: 0px; padding-right: 3px">
+            <input class="form-control input-sm" placeholder="City">
+          </div>
+          <div class="col-xs-6" style="padding-left: 3px; padding-right: 0px" >
+            <select class='form-control input-sm' ng-model="report_type">
+              <option value="">State</option>
+              <option>Kamataka</option>
+              <option>Andra Pradesh</option>
+            </select>
+          </div>
+          <div class="col-xs-6 margin-top" style="padding-left: 0px; padding-right: 3px">
+            <input class="form-control input-sm" placeholder="Zip">
+          </div>
+          <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
+            <select class='form-control input-sm' ng-model="report_type">
+              <option value="">Country</option>
+              <option>USA</option>
+            </select>
+          </div>
+        </div>
+
+        <input class="form-control input-sm margin-top" style="margin-top: 80px" placeholder="Phone #">
+        <input class="form-control input-sm margin-top" placeholder="Email ID">
+        <input class="form-control input-sm margin-top" placeholder="User Name">
+        <input class="form-control input-sm margin-top" placeholder="Password">
+        <input class="form-control input-sm margin-top" placeholder="Re-Enter Password">
+        <label class="md-check text-white" style="margin-top: 7px; text-align: left">
+          <input type="checkbox" >
+          <i class="green"></i>
+          I accept Term & Conditions
+        </label>
+      </div>
+
+      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+        <button class="button button-calm button-small" style="display: block; width: 100%">
+          Register
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
