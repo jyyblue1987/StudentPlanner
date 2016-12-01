@@ -8,7 +8,7 @@
   min-width: 250px;
   min-height: 250px; }
 
-.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+a.tab-item.active {
   border-width: 0 0 1px 0;
   border-color: #fff;
 }

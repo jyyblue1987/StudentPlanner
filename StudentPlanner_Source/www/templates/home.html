@@ -3,25 +3,59 @@
     <h1 class="title">STUDENT PLANNER</h1>
   </div>
   <ion-content class="has-header">
-    <div style="margin-top: 80px; width: 100%; text-align: center">
+
+    <div style="margin-top: 180px; width: 100%; text-align: center">
       <div class="div_center" style="width: 70%">
-        <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
-          <option>School</option>
-          <option selected>Teacher</option>
-          <option>Student</option>
-          <option>Parent</option>
-        </select>
+        <a ng-class ="{'tab-item': true, 'active': tab == 'Login'}" style="color: #ffcc66; display: inline-block;border-width: 0 0 1px 0;  border-color: #fff;" ng-click="tab = 'Login'">
+          Login
+        </a>
+        <a ng-class ="{'tab-item': true, 'active': tab == 'Register'}" style="color: #ffcc66; display: inline-block; margin-left: 50px" ng-click="tab = 'Register'">
+          Register
+        </a>
       </div>
-      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
-        <button class="button button-positive button-small" style="display: block; width: 100%">
-          Teature Login
-        </button>
-        <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
-          Student Login
-        </button>
-        <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
-          Parent Login
-        </button>
+      <div ng-show="tab == 'Login'">
+        <div class="div_center" style="width: 70%; margin-top: 40px">
+          <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
+            <option value="">Login As</option>
+            <option>School</option>
+            <option>Teacher</option>
+            <option>Student</option>
+            <option>Parent</option>
+          </select>
+        </div>
+        <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+          <button class="button button-positive button-small" style="display: block; width: 100%">
+            Teature Login
+          </button>
+          <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+            Student Login
+          </button>
+          <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+            Parent Login
+          </button>
+        </div>
+      </div>
+      <div ng-show="tab == 'Register'">
+        <div class="div_center" style="width: 70%; margin-top: 40px">
+          <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
+            <option value="">Register As</option>
+            <option>School</option>
+            <option>Teacher</option>
+            <option>Student</option>
+            <option>Parent</option>
+          </select>
+        </div>
+        <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+          <button class="button button-positive button-small" style="display: block; width: 100%">
+            Teature Register
+          </button>
+          <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+            Student Register
+          </button>
+          <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+            Parent Register
+          </button>
+        </div>
       </div>
     </div>
   </ion-content>
