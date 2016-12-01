@@ -1,5 +1,38 @@
 /* Empty. Add your own CSS if you like */
+
+.pane.has-bg {
+  background-color: rgb(77, 77, 77);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-width: 250px;
+  min-height: 250px; }
+
 .tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
   border-width: 0 0 1px 0;
   border-color: #fff;
+}
+
+
+.div_center {
+  position: relative;
+  display: inline-block;
+}
+
+.text_input {
+  border-color: transparent;
+  background-color: #ffffff;
+  color: #4e4e4e;
+  margin: 0;
+  min-width: 52px;
+  min-height: 62px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  vertical-align: top;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 28px;
+  line-height: 60px;
+  cursor: pointer;
 }

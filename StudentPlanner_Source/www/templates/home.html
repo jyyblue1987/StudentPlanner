@@ -1,23 +1,28 @@
-<ion-view view-title="Student">
+<ion-view view-title="Student" class="has-bg">
   <div class="bar bar-header bar-energized">
     <h1 class="title">STUDENT PLANNER</h1>
   </div>
-  <ion-content style="background-color: rgb(77, 77, 77)">
-    <div style="text-align:center;margin-top:180px;">
-      <div class = "tabs-striped tabs-background-light">
-        <div class = "tabs" style="background-color: transparent; border: transparent">
-          <a ng-class ="{'tab-item': true, 'active': tab == 'Login'}" style="color: #ffcc66" ng-click="tab = 'Login'">
-            Login
-          </a>
-          <a ng-class ="{'tab-item': true, 'active': tab == 'Register'}" style="color: #ffcc66" ng-click="tab = 'Register'">
-            Register
-          </a>
-        </div>
+  <ion-content class="has-header">
+    <div style="margin-top: 80px; width: 100%; text-align: center">
+      <div class="div_center" style="width: 70%">
+        <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
+          <option>School</option>
+          <option selected>Teacher</option>
+          <option>Student</option>
+          <option>Parent</option>
+        </select>
       </div>
-      <div>
-        11111
+      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+        <button class="button button-positive button-small" style="display: block; width: 100%">
+          Teature Login
+        </button>
+        <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+          Student Login
+        </button>
+        <button class="button button-positive button-small" style="display: block; width: 100%; margin-top: 10px">
+          Parent Login
+        </button>
       </div>
-
     </div>
   </ion-content>
 </ion-view>
