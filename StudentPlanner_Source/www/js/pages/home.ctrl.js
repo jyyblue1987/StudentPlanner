@@ -1,7 +1,3 @@
-(function (){
-  'use strict';
-
-  app.controller('HomeController', function ($scope, $rootScope, $state, $http, $ionicLoading) {
-
-  });
-})();
+app.controller('HomeController', function ($scope, $rootScope, $state, $http, $ionicLoading) {
+  $scope.tab = 'Login';
+});

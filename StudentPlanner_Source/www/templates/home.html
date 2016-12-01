@@ -1,8 +1,23 @@
 <ion-view view-title="Student">
-  <ion-content>
-    <div class="bar bar-header bar-energized">
-      <button class="button icon ion-navicon"></button>
-      <h1 class="title">STUDENT PLANNER</h1>
+  <div class="bar bar-header bar-energized">
+    <h1 class="title">STUDENT PLANNER</h1>
+  </div>
+  <ion-content style="background-color: rgb(77, 77, 77)">
+    <div style="text-align:center;margin-top:180px;">
+      <div class = "tabs-striped tabs-background-light">
+        <div class = "tabs" style="background-color: transparent; border: transparent">
+          <a ng-class ="{'tab-item': true, 'active': tab == 'Login'}" style="color: #ffcc66" ng-click="tab = 'Login'">
+            Login
+          </a>
+          <a ng-class ="{'tab-item': true, 'active': tab == 'Register'}" style="color: #ffcc66" ng-click="tab = 'Register'">
+            Register
+          </a>
+        </div>
+      </div>
+      <div>
+        11111
+      </div>
+
     </div>
   </ion-content>
 </ion-view>

@@ -1,1 +1,5 @@
 /* Empty. Add your own CSS if you like */
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+  border-width: 0 0 1px 0;
+  border-color: #fff;
+}
