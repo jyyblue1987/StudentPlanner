@@ -21,4 +21,6 @@ var app = angular.module('app', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-})
+});
+
+

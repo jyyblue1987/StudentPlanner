@@ -4,6 +4,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'LoginController'})
       .state('register', { url: '/register', templateUrl: 'templates/register.html', controller: 'RegisterController'})
       .state('teachermenu', { url: '/teachermenu', templateUrl: 'templates/teacher_menu.html', controller: 'TeacherMenuController'})
+      .state('profile', { url: '/profile', templateUrl: 'templates/profile.html', controller: 'ProfileController'})
       $urlRouterProvider.otherwise('/');
   })
   .constant("myConfig", {
