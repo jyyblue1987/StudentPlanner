@@ -1,4 +1,4 @@
-app.controller('HomeworkListController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
+app.controller('HomeworkSublistController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
   $scope.myGoBack = function() {
     $ionicHistory.goBack();
   };
@@ -18,11 +18,14 @@ app.controller('HomeworkListController', function ($scope, $rootScope, $state, $
   $scope.message = '';
 
   $scope.onClickEdit = function() {
-    $state.go('homework_add');
+    $state.go('student_edit');
   }
 
-  $scope.onClickMenu = function($index) {
-    $state.go('homework_sublist');
+  $scope.onClickRemove = function($index) {
+    $scope.menulist.splice($index, 1);
   }
 
+  $scope.onClickAdd = function() {
+    $state.go('homework_send');
+  }
 });

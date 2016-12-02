@@ -16,6 +16,8 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
 
       .state('homework_list', { url: '/homework_list', templateUrl: 'templates/homework_list.html', controller: 'HomeworkListController'})
       .state('homework_add', { url: '/homework_add', templateUrl: 'templates/homework_add.html', controller: 'HomeworkAddController'})
+      .state('homework_sublist', { url: '/homework_sublist', templateUrl: 'templates/homework_sublist.html', controller: 'HomeworkSublistController'})
+      .state('homework_send', { url: '/homework_send', templateUrl: 'templates/homework_send.html', controller: 'HomeworkSendController'})
 
       $urlRouterProvider.otherwise('/');
   })
