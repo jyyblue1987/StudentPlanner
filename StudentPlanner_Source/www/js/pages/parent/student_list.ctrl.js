@@ -21,7 +21,7 @@ app.controller('ParentStudentListController', function ($scope, $rootScope, $sta
   }
 
   $scope.onClickRemove = function($index) {
-    $scope.menulist.splice($index, 1);
+    $scope.student_list.splice($index, 1);
   }
 
   $scope.onClickAdd = function() {

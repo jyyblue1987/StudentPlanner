@@ -38,6 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('parent_student_list', { url: '/parent/student/list', templateUrl: 'templates/parent/student_list.html', controller: 'ParentStudentListController'})
       .state('parent_student_add', { url: '/parent/student/add', templateUrl: 'templates/parent/student_add.html', controller: 'ParentStudentAddController'})
       .state('parent_student_edit', { url: '/parent/student/edit', templateUrl: 'templates/parent/student_edit.html', controller: 'ParentStudentEditController'})
+      .state('parent_subject_list', { url: '/parent/subject/list', templateUrl: 'templates/parent/subject_list.html', controller: 'ParentSubjectListController'})
 
     $urlRouterProvider.otherwise('/');
   })
