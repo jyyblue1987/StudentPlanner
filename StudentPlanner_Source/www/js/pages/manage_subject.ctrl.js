@@ -24,4 +24,8 @@ app.controller('ManageSubjectController', function ($scope, $rootScope, $state, 
   $scope.onClickRemove = function($index) {
     $scope.menulist.splice($index, 1);
   }
+
+  $scope.onAddSubject = function() {
+    $state.go('subject_add');
+  }
 });
