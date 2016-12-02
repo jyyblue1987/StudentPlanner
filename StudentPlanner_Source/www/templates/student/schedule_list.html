@@ -13,13 +13,13 @@
 
     <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
 
-    <div class="text-center" style="margin-top: 40px">
-      <div class="div_center card" style="width: 80%; padding: 5px">
+    <div class="text-center" ng-repeat="row in schedule_list" style="margin-top: 0px">
+      <div class="div_center card" style="width: 80%; padding: 5px; margin-bottom: 5px">
         <div class="row margin-top">
-          <label class="text-black" style="text-align: left; margin-left: 4px">Stephan</label>
+          <label class="text-black" style="text-align: left; margin-left: 4px">{{row.name}}</label>
         </div>
         <div class="row margin-top" style="margin-top: 5px">
-          <label class="text-black" style="text-align: left; margin-left: 4px">18/9/16</label>
+          <label class="text-black" style="text-align: left; margin-left: 4px">{{row.date}}</label>
         </div>
 
         <div class="item" style="text-align: left; padding: 10px">
@@ -30,24 +30,6 @@
           </div>
         </div>
       </div>
-
-      <div class="div_center card" style="width: 80%; padding: 5px">
-        <div class="row margin-top">
-          <label class="text-black" style="text-align: left; margin-left: 4px">Stephan</label>
-        </div>
-        <div class="row margin-top" style="margin-top: 5px">
-          <label class="text-black" style="text-align: left; margin-left: 4px">18/9/16</label>
-        </div>
-
-        <div class="item" style="text-align: left; padding: 10px">
-          <label class="text-black" style="margin-left: 0px">Event Detail</label>
-          <div class="pull-right">
-            <i class = "icon icon ion-edit" ng-click="onClickEdit()"></i>
-            <i class = "icon icon ion-trash-a" style="margin-left: 15px" ng-click="onClickRemove()"></i>
-          </div>
-        </div>
-      </div>
-
 
     </div>
 
