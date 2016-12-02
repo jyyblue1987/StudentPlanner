@@ -16,14 +16,9 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
       $state.go('student_subject_edit');
     }
 
-    if( menu == 'Manage Student' )
-    {
-      $state.go('student_list');
-    }
-
     if( menu == 'Manage Homework' )
     {
-      $state.go('homework_list');
+      $state.go('student_homework_confirm');
     }
   }
 
