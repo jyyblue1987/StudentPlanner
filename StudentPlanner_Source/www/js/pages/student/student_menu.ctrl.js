@@ -20,6 +20,11 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
     {
       $state.go('student_homework_confirm');
     }
+
+    if( menu == 'Scheduler' )
+    {
+      $state.go('student_schedule_list');
+    }
   }
 
   $scope.onClickLogout = function() {
