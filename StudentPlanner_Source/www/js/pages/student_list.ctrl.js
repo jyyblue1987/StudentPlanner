@@ -1,16 +1,16 @@
-app.controller('ManageSubjectController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
+app.controller('StudentListController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
   $scope.myGoBack = function() {
     $ionicHistory.goBack();
   };
 
-  $scope.title = 'MANAGE SUBJECT';
+  $scope.title = 'MANAGE STUDENT';
 
   $scope.menulist = [
-    'History Class',
-    'Scientific Class',
-    'Maths Class',
-    'Social Class',
-    'Hindi Class',
+    'Aney',
+    'Georgy',
+    'Herry',
+    'Rosy',
+    'Stephan',
   ]
 
   $scope.onClickLogout = function() {
@@ -20,7 +20,7 @@ app.controller('ManageSubjectController', function ($scope, $rootScope, $state, 
   $scope.message = '';
 
   $scope.onClickEdit = function() {
-    $state.go('subject_edit');
+    $state.go('student_edit');
   }
 
   $scope.onClickRemove = function($index) {
@@ -28,6 +28,6 @@ app.controller('ManageSubjectController', function ($scope, $rootScope, $state, 
   }
 
   $scope.onClickAdd = function() {
-    $state.go('subject_add');
+    $state.go('student_add');
   }
 });

@@ -15,6 +15,11 @@ app.controller('TeacherMenuController', function ($scope, $rootScope, $state, $h
     {
       $state.go('managesubject');
     }
+
+    if( menu == 'Manage Student' )
+    {
+      $state.go('student_list');
+    }
   }
 
   $scope.onClickLogout = function() {

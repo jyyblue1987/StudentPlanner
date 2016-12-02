@@ -1,4 +1,4 @@
-app.controller('ProfileController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
+app.controller('StudentEditController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory) {
   $scope.myGoBack = function() {
     $ionicHistory.goBack();
   };
@@ -7,7 +7,7 @@ app.controller('ProfileController', function ($scope, $rootScope, $state, $http,
     $state.go('login');
   }
 
-  $scope.title = 'PROFILE';
+  $scope.title = 'STUDENT PROFILE';
   $scope.message = '';
 
   $scope.onClickUpdate = function() {
