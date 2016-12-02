@@ -1,6 +1,6 @@
 app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     $stateProvider
-      .state('index', { url: '/', templateUrl: 'templates/home.html', controller: 'HomeController'})
+      .state('home', { url: '/', templateUrl: 'templates/home.html', controller: 'HomeController'})
       .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'LoginController'})
       .state('register', { url: '/register', templateUrl: 'templates/register.html', controller: 'RegisterController'})
       .state('profile', { url: '/profile', templateUrl: 'templates/profile.html', controller: 'ProfileController'})
@@ -25,6 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('student_login', { url: '/student/login', templateUrl: 'templates/login.html', controller: 'StudentLoginController'})
       .state('student_register', { url: '/student/register', templateUrl: 'templates/register.html', controller: 'StudentRegisterController'})
       .state('student_menu', { url: '/student/menu', templateUrl: 'templates/menu.html', controller: 'StudentMenuController'})
+      .state('student_subject_edit', { url: '/student/subject/edit', templateUrl: 'templates/student/subject_edit.html', controller: 'StudentSubjectEditController'})
 
       $urlRouterProvider.otherwise('/');
   })

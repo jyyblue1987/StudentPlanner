@@ -4,6 +4,6 @@ app.controller('StudentLoginController', function ($scope, $rootScope, $state, $
   };
 
   $scope.onClickLogin = function () {
-    $state.go('studentmenu');
+    $state.go('student_menu');
   }
 });

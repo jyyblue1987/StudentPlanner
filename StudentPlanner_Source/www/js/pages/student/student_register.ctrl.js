@@ -4,6 +4,6 @@ app.controller('StudentRegisterController', function ($scope, $rootScope, $state
   };
 
   $scope.onClickRegister = function () {
-    $state.go('teachermenu');
+    $state.go('student_menu');
   }
 });

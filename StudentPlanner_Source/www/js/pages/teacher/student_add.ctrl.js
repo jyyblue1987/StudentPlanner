@@ -4,7 +4,7 @@ app.controller('StudentAddController', function ($scope, $rootScope, $state, $ht
   };
 
   $scope.onClickLogout = function() {
-    $state.go('login');
+    $state.go('home');
   }
 
   $scope.title = 'ADD STUDENT';

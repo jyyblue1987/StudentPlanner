@@ -4,7 +4,7 @@ app.controller('StudentEditController', function ($scope, $rootScope, $state, $h
   };
 
   $scope.onClickLogout = function() {
-    $state.go('login');
+    $state.go('home');
   }
 
   $scope.title = 'STUDENT PROFILE';

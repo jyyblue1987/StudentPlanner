@@ -12,7 +12,7 @@ app.controller('HomeworkSublistController', function ($scope, $rootScope, $state
   ]
 
   $scope.onClickLogout = function() {
-    $state.go('login');
+    $state.go('home');
   }
 
   $scope.message = '';

@@ -4,7 +4,7 @@ app.controller('ProfileController', function ($scope, $rootScope, $state, $http,
   };
 
   $scope.onClickLogout = function() {
-    $state.go('login');
+    $state.go('home');
   }
 
   $scope.title = 'PROFILE';

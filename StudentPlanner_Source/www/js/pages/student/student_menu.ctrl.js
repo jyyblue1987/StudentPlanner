@@ -3,7 +3,7 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
     $ionicHistory.goBack();
   };
 
-  $scope.list = ['Profile', 'Manage Subject', 'Manage Student', 'Manage Homework'];
+  $scope.list = ['Profile', 'Manage Subject', 'Manage Homework', 'Scheduler'];
 
   $scope.onClickMenu = function(menu) {
     if( menu == 'Profile' )
@@ -13,7 +13,7 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
 
     if( menu == 'Manage Subject' )
     {
-      $state.go('managesubject');
+      $state.go('student_subject_edit');
     }
 
     if( menu == 'Manage Student' )
@@ -28,7 +28,7 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
   }
 
   $scope.onClickLogout = function() {
-    $state.go('login');
+    $state.go('home');
   }
 
 
