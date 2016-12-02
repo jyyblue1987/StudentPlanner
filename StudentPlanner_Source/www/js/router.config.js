@@ -31,7 +31,12 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('student_schedule_add', { url: '/student/schedule/add', templateUrl: 'templates/student/schedule_add.html', controller: 'ScheduleAddController'})
       .state('student_schedule_edit', { url: '/student/schedule/edit', templateUrl: 'templates/student/schedule_add.html', controller: 'ScheduleEditController'})
 
-      $urlRouterProvider.otherwise('/');
+      .state('parent_login', { url: '/parent/login', templateUrl: 'templates/login.html', controller: 'ParentLoginController'})
+      .state('parent_register', { url: '/parent/register', templateUrl: 'templates/register.html', controller: 'ParentRegisterController'})
+      .state('parent_menu', { url: '/parent/menu', templateUrl: 'templates/menu.html', controller: 'ParentMenuController'})
+      .state('parent_profile', { url: '/parent/profile', templateUrl: 'templates/parent/profile.html', controller: 'ParentProfileController'})
+
+    $urlRouterProvider.otherwise('/');
   })
   .constant("myConfig", {
     "url": "https://evening-eyrie-91165.herokuapp.com",
