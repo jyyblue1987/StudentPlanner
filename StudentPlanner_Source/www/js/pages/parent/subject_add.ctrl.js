@@ -11,6 +11,6 @@ app.controller('ParentSubjectAddController', function ($scope, $rootScope, $stat
   $scope.message = '';
 
   $scope.onClickAdd = function() {
-    $scope.message = 'Your subject is successfully updated';
+    $scope.message = 'Your subject is successfully added';
   }
 });
