@@ -50,3 +50,15 @@ a.tab-item.active {
   width: 100%; text-align: left;
   padding-left: 10px;
 }
+
+.floating-small #floating-button {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.floating-small #floating-button a {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}

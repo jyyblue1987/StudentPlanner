@@ -6,9 +6,14 @@ app.controller('TeacherMenuController', function ($scope, $rootScope, $state, $h
   $scope.list = ['Profile', 'Manage Subject', 'Manage Student', 'Manage Homework'];
 
   $scope.onClickMenu = function(menu) {
-    if( menu = 'Profile' )
+    if( menu == 'Profile' )
     {
       $state.go('profile');
+    }
+
+    if( menu == 'Manage Subject' )
+    {
+      $state.go('managesubject');
     }
   }
 
