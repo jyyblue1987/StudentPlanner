@@ -39,4 +39,14 @@ a.tab-item.active {
 
 .margin-top {
   margin-top: 6px;
+  margin-left: 0px;
+}
+
+.nav_button.icon-right:before {
+  margin-right: 5px;
+}
+
+.nav_button {
+  width: 100%; text-align: left;
+  padding-left: 10px;
 }

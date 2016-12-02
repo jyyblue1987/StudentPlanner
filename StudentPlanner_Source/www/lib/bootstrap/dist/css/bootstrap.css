@@ -1081,7 +1081,7 @@ th {
           box-sizing: border-box;
 }
 html {
-  
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -5314,12 +5314,12 @@ a.list-group-item-danger.active:focus {
 }
 .panel-body {
   padding: 15px;
-  
+
 }
 .panel-body-shadow {
   padding: 5px;
   box-shadow: 0 0 5px grey;
-  
+
 }
 
 .panel-heading {

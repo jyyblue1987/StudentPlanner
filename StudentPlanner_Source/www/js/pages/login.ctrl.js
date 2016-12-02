@@ -2,4 +2,8 @@ app.controller('LoginController', function ($scope, $rootScope, $state, $http, $
   $scope.myGoBack = function() {
     $ionicHistory.goBack();
   };
+
+  $scope.onClickLogin = function () {
+    $state.go('teachermenu');
+  }
 });
