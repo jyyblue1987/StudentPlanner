@@ -26,6 +26,6 @@ app.controller('ScheduleListController', function ($scope, $rootScope, $state, $
   }
 
   $scope.onClickAdd = function() {
-    $state.go('homework_send');
+    $state.go('student_schedule_add');
   }
 });
