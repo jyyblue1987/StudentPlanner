@@ -21,7 +21,7 @@ app.controller('ScheduleListController', function ($scope, $rootScope, $state, $
   }
 
   $scope.onClickRemove = function($index) {
-    $scope.menulist.splice($index, 1);
+    $scope.schedule_list.splice($index, 1);
   }
 
   $scope.onClickAdd = function() {
