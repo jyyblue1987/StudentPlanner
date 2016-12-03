@@ -1,0 +1,38 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+
+  <ion-floating-button class="floating-small" click="myEvent()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" icon-color="#fff" ng-click="onClickAdd()">
+  </ion-floating-button>
+
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
+
+    <div class="text-center" ng-repeat="row in schedule_list" style="margin-top: 0px">
+      <div class="div_center card" style="width: 80%; padding: 5px; margin-bottom: 5px">
+        <div class="row margin-top">
+          <label class="text-black" style="text-align: left; margin-left: 4px">{{row.name}}</label>
+        </div>
+        <div class="row margin-top" style="margin-top: 5px">
+          <label class="text-black" style="text-align: left; margin-left: 4px">{{row.date}}</label>
+        </div>
+
+        <div class="item" style="text-align: left; padding: 10px">
+          <label class="text-black" style="margin-left: 0px">Event Detail</label>
+          <div class="pull-right">
+            <i class = "icon icon ion-edit" ng-click="onClickEdit()"></i>
+            <i class = "icon icon ion-trash-a" style="margin-left: 15px" ng-click="onClickRemove()"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>

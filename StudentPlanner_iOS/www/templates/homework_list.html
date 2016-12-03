@@ -1,0 +1,29 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <div class="text-center" style="margin-top: 40px">
+      <div class="div_center card list" style="width: 80%">
+        <div class="item item-divider">
+          Carmel
+        </div>
+
+        <div class="item" ng-repeat="row in menulist" style="text-align: left; padding: 7px 20px 5px 5px">
+            <label style="margin-bottom: 0px;">{{row}}</label>
+            <div class="pull-right">
+              <i class = "icon icon ion-edit" ng-click="onClickEdit($index)"></i>
+              <i class = "icon icon ion-android-menu" style="margin-left: 15px" ng-click="onClickMenu($index)"></i>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

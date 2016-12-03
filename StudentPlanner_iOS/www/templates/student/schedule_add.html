@@ -1,0 +1,54 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
+
+    <div class="text-center" style="margin-top: 10px">
+      <div class="div_center" style="width: 80%">
+        <div class="row margin-top">
+          <textarea class="form-control input-sm margin-top" placeholder="Description"></textarea>
+        </div>
+
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Event">
+        </div>
+
+        <div class="row margin-top" style="margin-top: 0px">
+          <div class="col-50" style="padding-left: 0px; padding-right: 3px" ion-datetime-picker date ng-model="data.dateValue">
+            <input class="form-control input-sm" ng-model="date" placeholder="Date">
+          </div>
+          <div class="col-50" style="padding-left: 3px; padding-right: 0px" ion-datetime-picker time ng-model="data.timeValue">
+            <input class="form-control input-sm" ng-model="time" placeholder="Time">
+          </div>
+        </div>
+        <div class="row margin-top" style="margin-top: 15px">
+          <label class="md-check text-white">
+            <input type="checkbox" >
+            <i class="green"></i>
+            Email
+          </label>
+
+          <label class="md-check text-white" style="margin-left: 20px">
+            <input type="checkbox" >
+            <i class="green"></i>
+            Alert Notification
+          </label>
+        </div>
+
+      </div>
+
+      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+        <button class="button button-calm button-small" style="display: block; width: 100%" ng-click="onClickAdd()">
+          Add Event
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

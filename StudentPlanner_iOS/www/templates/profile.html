@@ -1,0 +1,83 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
+
+    <div class="text-center" style="margin-top: 10px">
+      <div class="div_center" style="width: 80%">
+        <div class="row margin-top">
+          <h6 class="text-white" style="text-align: left; margin-left: 4px">ID No. 1234</h6>
+        </div>
+        <div class="row margin-top">
+          <select class='form-control' ng-model="report_type">
+            <option value="">School</option>
+            <option>Cambridge</option>
+            <option>Carmel</option>
+          </select>
+        </div>
+
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Full Name">
+        </div>
+
+        <div class="row margin-top">
+          <textarea class="form-control input-sm margin-top" placeholder="Address"></textarea>
+        </div>
+
+        <div class="row margin-top" style="margin-top: 0px">
+          <div class="col-50" style="padding-left: 0px; padding-right: 3px">
+            <input class="form-control input-sm" placeholder="City">
+          </div>
+          <div class="col-50" style="padding-left: 3px; padding-right: 0px" >
+            <select class='form-control input-sm' ng-model="report_type">
+              <option value="">State</option>
+              <option>Kamataka</option>
+              <option>Andra Pradesh</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row margin-top">
+          <div class="col-xs-6 margin-top" style="padding-left: 0px; padding-right: 3px">
+            <input class="form-control input-sm" placeholder="Zip">
+          </div>
+          <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
+            <select class='form-control input-sm' ng-model="report_type">
+              <option value="">Country</option>
+              <option>USA</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Phone #">
+        </div>
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Email ID">
+        </div>
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="User Name">
+        </div>
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Password">
+        </div>
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="Re-Enter Password">
+        </div>
+      </div>
+
+      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+        <button class="button button-calm button-small" style="display: block; width: 100%" ng-click="onClickUpdate()">
+          Update
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

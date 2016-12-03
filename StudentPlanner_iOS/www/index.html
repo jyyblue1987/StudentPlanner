@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/md.css" rel="stylesheet">
+    <link href="lib/ion-floating-menu/dist/ion-floating-menu.css" rel="stylesheet" type="text/css"/>
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="lib/moment/min/moment.min.js"></script>
+    <script src="lib/ion-floating-menu/dist/ion-floating-menu.js" type="text/javascript"></script>
+    <script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
+    <link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/router.config.js"></script>
+    <script src="js/pages/home.ctrl.js"></script>
+    <script src="js/pages/login.ctrl.js"></script>
+    <script src="js/pages/register.ctrl.js"></script>
+
+    <script src="js/pages/teacher/teacher_login.ctrl.js"></script>
+    <script src="js/pages/teacher/teacher_register.ctrl.js"></script>
+
+    <script src="js/pages/teacher/teacher_menu.ctrl.js"></script>
+    <script src="js/pages/profile.ctrl.js"></script>
+
+    <script src="js/pages/teacher/manage_subject.ctrl.js"></script>
+    <script src="js/pages/teacher/subject_add.ctrl.js"></script>
+    <script src="js/pages/teacher/subject_edit.ctrl.js"></script>
+
+    <script src="js/pages/teacher/student_list.ctrl.js"></script>
+    <script src="js/pages/teacher/student_add.ctrl.js"></script>
+    <script src="js/pages/teacher/student_edit.ctrl.js"></script>
+
+    <script src="js/pages/teacher/homework_list.ctrl.js"></script>
+    <script src="js/pages/teacher/homework_add.ctrl.js"></script>
+    <script src="js/pages/teacher/homework_sublist.ctrl.js"></script>
+    <script src="js/pages/teacher/homework_send.ctrl.js"></script>
+
+    <script src="js/pages/student/student_login.ctrl.js"></script>
+    <script src="js/pages/student/student_register.ctrl.js"></script>
+    <script src="js/pages/student/student_menu.ctrl.js"></script>
+    <script src="js/pages/student/subject_edit.ctrl.js"></script>
+    <script src="js/pages/student/homework_confirm.ctrl.js"></script>
+    <script src="js/pages/student/schedule_list.ctrl.js"></script>
+    <script src="js/pages/student/schedule_add.ctrl.js"></script>
+    <script src="js/pages/student/schedule_edit.ctrl.js"></script>
+
+    <script src="js/pages/parent/parent_login.ctrl.js"></script>
+    <script src="js/pages/parent/parent_register.ctrl.js"></script>
+    <script src="js/pages/parent/parent_menu.ctrl.js"></script>
+    <script src="js/pages/parent/parent_profile.ctrl.js"></script>
+    <script src="js/pages/parent/schedule_list.ctrl.js"></script>
+    <script src="js/pages/parent/student_add.ctrl.js"></script>
+    <script src="js/pages/parent/student_edit.ctrl.js"></script>
+    <script src="js/pages/parent/subject_list.ctrl.js"></script>
+    <script src="js/pages/parent/subject_add.ctrl.js"></script>
+    <script src="js/pages/parent/subject_edit.ctrl.js"></script>
+    <script src="js/pages/parent/homework_confirm.ctrl.js"></script>
+    <script src="js/pages/parent/schedule_list.ctrl.js"></script>
+    <script src="js/pages/parent/schedule_add.ctrl.js"></script>
+    <script src="js/pages/parent/schedule_edit.ctrl.js"></script>
+
+    <script src="js/pages/school/school_login.ctrl.js"></script>
+    <script src="js/pages/school/school_menu.ctrl.js"></script>
+    <script src="js/pages/school/class_add.ctrl.js"></script>
+    <script src="js/pages/school/subject_add.ctrl.js"></script>
+    <script src="js/pages/school/identifier_add.ctrl.js"></script>
+
+  </head>
+  <body ng-app="app"  class="platform-ios platform-cordova platform-webview">
+    <ion-nav-view class="nav-default"></ion-nav-view>
+  </body>
+</html>

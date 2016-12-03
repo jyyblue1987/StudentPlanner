@@ -1,0 +1,48 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
+
+    <div class="text-center" style="margin-top: 40px">
+      <div class="div_center card" style="width: 80%; padding: 5px">
+        <div class="row margin-top" style="margin-top: 0px">
+          <h5 class="text-black" style="text-align: left; margin-left: 4px">New Cambridge School</h5>
+        </div>
+        <div class="row margin-top">
+          <h6 class="text-black" style="text-align: left; margin-left: 4px">1st Class - Blue - English</h6>
+        </div>
+
+        <div class="row margin-top">
+          <h6 class="text-black" style="text-align: left; margin-left: 4px">2016-12-12</h6>
+        </div>
+
+        <div class="row margin-top">
+          <textarea class="form-control input-sm margin-top" placeholder="English Handwriting"></textarea>
+        </div>
+
+        <div class="row margin-top" style="margin-top: 0px">
+          <label class="md-check text-black" style="text-align: left">
+            <input type="checkbox" >
+            <i class="green"></i>
+            Email
+          </label>
+        </div>
+
+        <div class="row margin-top div_center" style="margin: 30px 0 20px 0; width: 60%;" >
+          <button class="button button-calm button-small" style="display: block; width: 100%">
+            Send
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-view>
