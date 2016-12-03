@@ -41,7 +41,6 @@ a.tab-item.active {
 
 .margin-top {
   margin-top: 6px;
-  margin-left: 0px;
 }
 
 .nav_button.icon-right:before {
@@ -63,4 +62,8 @@ a.tab-item.active {
   width: 35px;
   height: 35px;
   line-height: 35px;
+}
+
+.row {
+  margin-left: 0px;
 }

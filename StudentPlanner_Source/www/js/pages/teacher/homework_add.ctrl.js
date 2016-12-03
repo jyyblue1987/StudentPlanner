@@ -16,6 +16,7 @@ app.controller('HomeworkAddController', function ($scope, $rootScope, $state, $h
   }
 
   $scope.message = '';
+  $scope.datetimeValue = new Date();
 
   $scope.onClickEdit = function() {
     $state.go('student_edit');

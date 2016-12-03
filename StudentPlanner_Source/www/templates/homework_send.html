@@ -20,7 +20,7 @@
         </div>
 
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Class">
+          <input class="form-control input-sm margin-top" ng-model="class" placeholder="Class">
         </div>
 
         <div class="row margin-top">
@@ -31,8 +31,8 @@
           <input class="form-control input-sm margin-top" placeholder="Identifier">
         </div>
 
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Due Date(MM/DD/YY)">
+        <div class="row margin-top" ion-datetime-picker date ng-model="data.datetimeValue">
+          <input class="form-control input-sm margin-top" ng-model="date" placeholder="Due Date(MM/DD/YY)">
         </div>
 
         <div class="row margin-top">
