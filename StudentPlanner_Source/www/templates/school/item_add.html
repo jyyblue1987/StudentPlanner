@@ -1,0 +1,27 @@
+<ion-view view-title="Student" class="has-bg">
+  <div class="bar bar-header bar-energized">
+    <button class="button icon ion-ios-arrow-back" ng-click="myGoBack()"></button>
+    <h1 class="title">STUDENT PLANNER</h1>
+    <button class="button icon ion-power" ng-click="onClickLogout()"></button>
+  </div>
+  <ion-content class="has-header">
+    <h4 class="text-white text-center" style="margin-top: 30px">{{title}}</h4>
+
+    <h5 class="text-center" style="margin-top: 30px; color: red" ng-show="message != ''">{{message}}</h5>
+
+    <div class="text-center" style="margin-top: 10px">
+      <div class="div_center" style="width: 80%">
+        <div class="row margin-top">
+          <input class="form-control input-sm margin-top" placeholder="{{placeholder}}">
+        </div>
+      </div>
+
+      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+        <button class="button button-calm button-small" style="display: block; width: 100%" ng-click="onClickAdd()">
+          Create
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

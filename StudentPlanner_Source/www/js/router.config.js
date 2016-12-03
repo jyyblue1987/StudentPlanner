@@ -46,6 +46,12 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('parent_schedule_add', { url: '/parent/schedule/add', templateUrl: 'templates/student/schedule_add.html', controller: 'ParentScheduleAddController'})
       .state('parent_schedule_edit', { url: '/parent/schedule/edit', templateUrl: 'templates/student/schedule_add.html', controller: 'ParentScheduleEditController'})
 
+      .state('school_login', { url: '/school/login', templateUrl: 'templates/login.html', controller: 'SchoolLoginController'})
+      .state('school_menu', { url: '/school/menu', templateUrl: 'templates/menu.html', controller: 'SchoolMenuController'})
+      .state('school_class_create', { url: '/school/class/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolClassAddController'})
+      .state('school_subject_create', { url: '/school/subject/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolSubjectAddController'})
+      .state('school_identifier_create', { url: '/school/identifier/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolIdentifierAddController'})
+
     $urlRouterProvider.otherwise('/');
   })
   .constant("myConfig", {

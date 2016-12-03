@@ -3,6 +3,8 @@ app.controller('StudentMenuController', function ($scope, $rootScope, $state, $h
     $ionicHistory.goBack();
   };
 
+  $scope.title = "STUDENT";
+
   $scope.list = ['Profile', 'Manage Subject', 'Manage Homework', 'Scheduler'];
 
   $scope.onClickMenu = function(menu) {
