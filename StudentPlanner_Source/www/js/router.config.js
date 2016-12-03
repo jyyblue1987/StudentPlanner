@@ -57,4 +57,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   .constant("myConfig", {
     "url": "https://evening-eyrie-91165.herokuapp.com",
     "port": "80"
+  })
+  .config(function($ionicConfigProvider) {
+    $ionicConfigProvider.views.swipeBackEnabled(true);
   });
