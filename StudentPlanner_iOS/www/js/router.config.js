@@ -50,7 +50,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('school_menu', { url: '/school/menu', templateUrl: 'templates/menu.html', controller: 'SchoolMenuController'})
       .state('school_class_create', { url: '/school/class/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolClassAddController'})
       .state('school_subject_create', { url: '/school/subject/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolSubjectAddController'})
-      .state('school_identifier_create', { url: '/school/identifier/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolIdentifierioAddController'})
+      .state('school_identifier_create', { url: '/school/identifier/create', templateUrl: 'templates/school/item_add.html', controller: 'SchoolIdentifierAddController'})
 
     $urlRouterProvider.otherwise('/');
   })
