@@ -13,4 +13,20 @@ app.controller('ScheduleEditController', function ($scope, $rootScope, $state, $
   $scope.onClickUpdate = function() {
     $scope.message = 'Your profile is successfully updated';
   }
+
+  $scope.data = {};
+  $scope.date = moment().format('YYYY-MM-DD');
+  $scope.time = moment().format('HH:mm');
+
+  $scope.$watch('data.dateValue', function(newValue, oldValue) {
+    if( newValue == oldValue )
+      return;
+    $scope.date = moment(newValue).format('YYYY-MM-DD');
+  });
+
+  $scope.$watch('data.timeValue', function(newValue, oldValue) {
+    if( newValue == oldValue )
+      return;
+    $scope.time = moment(newValue).format('HH:mm');
+  });
 });

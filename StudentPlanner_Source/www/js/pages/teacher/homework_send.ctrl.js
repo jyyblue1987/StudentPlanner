@@ -10,16 +10,12 @@ app.controller('HomeworkSendController', function ($scope, $rootScope, $state, $
   $scope.title = 'HOMEWORK';
   $scope.message = '';
 
-  $scope.data = {};
-  $scope.date = moment().format('YYYY-MM-DD');
-
   $scope.onClickUpdate = function() {
     $scope.message = 'Your profile is successfully updated';
   }
 
-  $scope.onSelectDate = function() {
-    $scope.date = moment($scope.datetimeValue).format('YYYY-MM-DD');
-  }
+  $scope.data = {};
+  $scope.date = moment().format('YYYY-MM-DD');
 
   $scope.$watch('data.datetimeValue', function(newValue, oldValue) {
     if( newValue == oldValue )

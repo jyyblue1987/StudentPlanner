@@ -20,11 +20,11 @@
         </div>
 
         <div class="row margin-top" style="margin-top: 0px">
-          <div class="col-50" style="padding-left: 0px; padding-right: 3px">
-            <input class="form-control input-sm" placeholder="Date">
+          <div class="col-50" style="padding-left: 0px; padding-right: 3px" ion-datetime-picker date ng-model="data.dateValue">
+            <input class="form-control input-sm" ng-model="date" placeholder="Date">
           </div>
-          <div class="col-50" style="padding-left: 3px; padding-right: 0px" >
-            <input class="form-control input-sm" placeholder="Time">
+          <div class="col-50" style="padding-left: 3px; padding-right: 0px" ion-datetime-picker time ng-model="data.timeValue">
+            <input class="form-control input-sm" ng-model="time" placeholder="Time">
           </div>
         </div>
         <div class="row margin-top" style="margin-top: 15px">
