@@ -67,3 +67,15 @@ a.tab-item.active {
 .row {
   margin-left: 0px;
 }
+
+
+html, body {
+  color: #333333;
+  font-family: -apple-system, "SF UI Text", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  overflow: hidden;
+  height: 100%;
+}
+

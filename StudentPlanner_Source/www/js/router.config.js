@@ -1,6 +1,6 @@
 app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
     $stateProvider
-      .state('home', { url: '/', templateUrl: 'templates/home.html', controller: 'HomeController'})
+      .state('home', { url: '/', templateUrl: 'templates/home.html', controller: 'HomeController as vm'})
       .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'LoginController'})
       .state('register', { url: '/register', templateUrl: 'templates/register.html', controller: 'RegisterController'})
       .state('profile', { url: '/profile', templateUrl: 'templates/profile.html', controller: 'ProfileController'})

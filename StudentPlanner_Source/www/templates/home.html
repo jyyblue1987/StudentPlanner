@@ -15,48 +15,29 @@
       </div>
       <div ng-show="tab == 'Login'">
         <div class="div_center" style="width: 70%; margin-top: 40px">
-          <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
-            <option value="">Login As</option>
-            <option>School</option>
+          <select class='form-control' ng-model="vm.login_as">
             <option>Teacher</option>
             <option>Student</option>
             <option>Parent</option>
           </select>
         </div>
         <div class="div_center" style="width: 50%; ; margin-top: 20px" >
-          <button class="button button-positive button-small" ng-click="login('teacher')" style="display: block; width: 100%">
-            Teature Login
-          </button>
-          <button class="button button-positive button-small" ng-click="login('student')" style="display: block; width: 100%; margin-top: 10px">
-            Student Login
-          </button>
-          <button class="button button-positive button-small" ng-click="login('parent')" style="display: block; width: 100%; margin-top: 10px">
-            Parent Login
-          </button>
-          <button class="button button-positive button-small" ng-click="login('school')" style="display: block; width: 100%; margin-top: 10px">
-            School Login
+          <button class="button button-positive button-small" ng-click="login()" style="display: block; width: 100%">
+            Proceed
           </button>
         </div>
       </div>
       <div ng-show="tab == 'Register'">
         <div class="div_center" style="width: 70%; margin-top: 40px">
-          <select class='form-control' ng-model="report_type" ng-change="onChangeReportType()">
-            <option value="">Register As</option>
-            <option>School</option>
+          <select class='form-control' ng-model="vm.register_as">
             <option>Teacher</option>
             <option>Student</option>
             <option>Parent</option>
           </select>
         </div>
         <div class="div_center" style="width: 50%; ; margin-top: 20px" >
-          <button class="button button-calm button-small" ng-click="register('teacher')" style="display: block; width: 100%">
-            Teature Register
-          </button>
-          <button class="button button-calm button-small" ng-click="register('student')" style="display: block; width: 100%; margin-top: 10px">
-            Student Register
-          </button>
-          <button class="button button-calm button-small" ng-click="register('parent')" style="display: block; width: 100%; margin-top: 10px">
-            Parent Register
+          <button class="button button-calm button-small" ng-click="register()" style="display: block; width: 100%">
+            Proceed
           </button>
         </div>
       </div>
