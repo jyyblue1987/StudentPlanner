@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('app', ['ionic', 'ion-floating-menu', 'ion-datetime-picker'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, ApiService) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -20,7 +20,23 @@ var app = angular.module('app', ['ionic', 'ion-floating-menu', 'ion-datetime-pic
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    initApp();
   });
+
+  function initApp() {
+    ApiService.getStateListData()
+      .then(function(response) {
+        console.log(response.data);
+        if( response.data.success == 1 )
+          ApiService.setStateList(response.data.States);
+      }).catch(function(response) {
+        console.error('Gists error', response.status, response.data);
+      })
+      .finally(function() {
+
+      });
+  }
 });
 
 
