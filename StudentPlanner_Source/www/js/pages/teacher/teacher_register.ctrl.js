@@ -1,4 +1,4 @@
-app.controller('TeacherRegisterController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory, $httpParamSerializer, serverConfig, ApiService, toaster) {
+app.controller('TeacherRegisterController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory, $httpParamSerializer, serverConfig, ApiService, AuthService, toaster) {
   var vm = this;
 
   function initData() {
@@ -15,6 +15,19 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
       vm.school_id = vm.school_list[0].School_ID;
 
     vm.accept_term = false;
+
+    vm.school_id = '500';
+    vm.full_name = 'TEACHER2';
+    vm.address = 'NEWYORK,USA';
+    vm.city = 'NEWYORK';
+    vm.zipcode = '4545';
+    vm.state_id = '1';
+    vm.country_id = '1';
+    vm.phone_no = '66666';
+    vm.email_id = 'teacher2@ebaraha.com';
+    vm.username = 'teacher2@ebaraha.com';
+    vm.password = 'password';
+    vm.re_password = 'password';
   }
 
   initData();
@@ -30,7 +43,11 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
       return;
     }
 
-
+    if( vm.password != vm.re_password )
+    {
+      toaster.pop('error', 'Register', 'Password does not match' );
+      return;
+    }
     $ionicLoading.show({
       template: "Loading..."
     });
@@ -49,9 +66,17 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
     data.username = vm.username;
     data.password = vm.password;
 
-    ApiService.register('teacher', data)
+    AuthService.register('teacher', data)
       .then(function(response) {
         console.log(response.data);
+        var data = response.data;
+        if( data.success == 1 )
+        {
+          console.log(data.Register[0].member_id);
+        }
+        else
+          toaster.pop('error', 'Register', data.Register[0].message );
+
       }).catch(function(response) {
         console.error('Gists error', response.status, response.data);
       })

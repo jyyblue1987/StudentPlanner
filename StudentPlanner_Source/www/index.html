@@ -43,6 +43,7 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/services/api.service.js"></script>
+    <script src="js/services/auth.service.js"></script>
     <script src="js/app.config.js"></script>
     <script src="js/router.config.js"></script>
     <script src="js/pages/home.ctrl.js"></script>
@@ -101,7 +102,7 @@
 
   </head>
   <body ng-app="app" >
-    <toaster-container style="font-size: 17px" toaster-options="{'position-class': 'toast-center', 'time-out': 200000, 'close-button':false}"></toaster-container>
+    <toaster-container style="font-size: 17px" toaster-options="{'position-class': 'toast-center', 'time-out': 2000, 'close-button':false}"></toaster-container>
     <ion-nav-view class="nav-default"></ion-nav-view>
   </body>
 </html>
