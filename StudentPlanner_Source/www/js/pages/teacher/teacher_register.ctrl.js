@@ -5,6 +5,10 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
     vm.state_list = ApiService.getStateList();
     if( vm.state_list.length > 0 )
       vm.state_id = vm.state_list[0].State_ID;
+
+    vm.country_list = ApiService.getCountryList();
+    if( vm.country_list.length > 0 )
+      vm.country_id = vm.country_list[0].State_ID;
   }
 
   initData();

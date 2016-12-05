@@ -25,17 +25,9 @@ var app = angular.module('app', ['ionic', 'ion-floating-menu', 'ion-datetime-pic
   });
 
   function initApp() {
-    ApiService.getStateListData()
-      .then(function(response) {
-        console.log(response.data);
-        if( response.data.success == 1 )
-          ApiService.setStateList(response.data.States);
-      }).catch(function(response) {
-        console.error('Gists error', response.status, response.data);
-      })
-      .finally(function() {
+    ApiService.getStateListData();
+    ApiService.getCountryListData();
 
-      });
   }
 });
 

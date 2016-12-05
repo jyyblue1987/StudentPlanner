@@ -39,9 +39,7 @@
             <input class="form-control input-sm" placeholder="Zip">
           </div>
           <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="vm.country_id">
-              <option value="">Country</option>
-              <option>USA</option>
+            <select class='form-control input-sm' ng-model="vm.country_id" ng-options="value.Country as value.Country_Name for (key, value) in vm.country_list">
             </select>
           </div>
         </div>

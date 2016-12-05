@@ -1,10 +1,19 @@
 app.service('ApiService', function ($http, serverConfig) {
+  var self = this;
   this.getStateListData = function() {
-
     var promiss = $http({
       method: 'GET',
       url: serverConfig.url + 'api_states.aspx?api_login_key=' + serverConfig.api_login_key,
-    });
+    }).then(function(response) {
+        console.log(response.data);
+        if( response.data.success == 1 )
+          self.setStateList(response.data.States);
+      }).catch(function(response) {
+        console.error('Gists error', response.status, response.data);
+      })
+      .finally(function() {
+
+      });
 
     return promiss;
   }
@@ -19,5 +28,36 @@ app.service('ApiService', function ($http, serverConfig) {
   }
 
   this.state_list = [];
+
+
+  this.getCountryListData = function() {
+
+    var promiss = $http({
+      method: 'GET',
+      url: serverConfig.url + 'api_country.aspx?api_login_key=' + serverConfig.api_login_key,
+    }).then(function(response) {
+      console.log(response.data);
+      if( response.data.success == 1 )
+        self.setCountryList(response.data.Country);
+    }).catch(function(response) {
+        console.error('Gists error', response.status, response.data);
+      })
+      .finally(function() {
+
+      });
+
+    return promiss;
+  }
+
+  this.setCountryList = function(list) {
+    for(var i = 0; i < list.length; i++ )
+      this.country_list.push(list[i]);
+  }
+
+  this.getCountryList = function() {
+    return this.country_list;
+  }
+
+  this.country_list = [];
 
 });
