@@ -7,10 +7,6 @@ app.controller('HomeController', function ($scope, $rootScope, $state, $http, $i
   vm.register_as = 'Teacher';
 
   $scope.login = function() {
-    switch( vm.login_as ) {
-
-    }
-
     $state.go(vm.login_as.toLowerCase() + '_login');
   }
   $scope.register = function() {
