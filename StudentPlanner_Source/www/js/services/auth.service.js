@@ -15,8 +15,22 @@ app.service('AuthService', function ($http, $httpParamSerializer, serverConfig) 
     return promiss;
   }
 
-  this.setProfile = function(profile) {
+  this.login = function(info) {
 
+    var data = angular.copy(info);
+
+    data.api_login_key = serverConfig.api_login_key;
+
+    var param = $httpParamSerializer(data);
+
+    var promiss = $http.get(serverConfig.url + 'api_login.aspx?' + param);
+
+    return promiss;
   }
 
+  this.profile = {};
+
+  this.setMember = function(member_id) {
+    this.profile.member_id = member_id;
+  }
 });

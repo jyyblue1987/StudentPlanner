@@ -6,19 +6,21 @@
   <ion-content class="has-header" on-swipe-right="myGoBack()">
     <h4 class="text-white text-center" style="margin-top: 70px">LOGIN</h4>
 
-    <div class="text-center" style="margin-top: 40px">
-      <div class="div_center" style="width: 80%">
-        <input class="form-control input-sm" placeholder="Email ID">
+    <form class="form-validation" ng-submit="onClickLogin()">
+      <div class="text-center" style="margin-top: 40px">
+        <div class="div_center" style="width: 80%">
+          <input class="form-control input-sm" ng-model="vm.email_id" placeholder="Email ID">
 
-        <input class="form-control input-sm margin-top" placeholder="Password">
-      </div>
+          <input class="form-control input-sm margin-top" ng-model="vm.password" placeholder="Password">
+        </div>
 
-      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
-        <button class="button button-positive button-small" ng-click="onClickLogin()" style="display: block; width: 100%">
-          Login
-        </button>
+        <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+          <button type="submit" class="button button-positive button-small" style="display: block; width: 100%">
+            Login
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
 
   </ion-content>
 </ion-view>

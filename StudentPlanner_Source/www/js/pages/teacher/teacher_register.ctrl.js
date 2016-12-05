@@ -1,6 +1,10 @@
 app.controller('TeacherRegisterController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory, $httpParamSerializer, serverConfig, ApiService, AuthService, toaster) {
   var vm = this;
 
+  $scope.myGoBack = function() {
+    $ionicHistory.goBack();
+  };
+
   function initData() {
     vm.state_list = ApiService.getStateList();
     if( vm.state_list.length > 0 )
@@ -73,6 +77,8 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
         if( data.success == 1 )
         {
           console.log(data.Register[0].member_id);
+          AuthService.setMember(data.Register[0].member_id);
+          gotoMenu();
         }
         else
           toaster.pop('error', 'Register', data.Register[0].message );
