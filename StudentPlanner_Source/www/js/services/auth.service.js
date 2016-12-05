@@ -33,4 +33,9 @@ app.service('AuthService', function ($http, $httpParamSerializer, serverConfig) 
   this.setMember = function(member_id) {
     this.profile.member_id = member_id;
   }
+
+  this.getMember = function() {
+    return 501;
+    //return this.profile.member_id;
+  }
 });

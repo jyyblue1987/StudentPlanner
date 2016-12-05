@@ -13,8 +13,8 @@
 
     <div class="text-center" style="margin-top: 40px">
       <div class="div_center list" style="width: 80%">
-        <div class="item" ng-click="onClickMenu()" ng-repeat="row in menulist" style="text-align: left; padding: 7px 20px 5px 5px">
-            <label style="margin-bottom: 0px;">{{row}}</label>
+        <div class="item" ng-click="onClickMenu()" ng-repeat="row in subject_list" style="text-align: left; padding: 7px 20px 5px 5px">
+            <label style="margin-bottom: 0px;">{{row.School_Name}}</label>
             <div class="pull-right">
               <i class = "icon icon ion-edit" ng-click="onClickEdit($index)"></i>
               <i class = "icon icon ion-trash-a" style="margin-left: 15px" ng-click="onClickRemove($index)"></i>
