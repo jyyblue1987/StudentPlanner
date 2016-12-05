@@ -1,4 +1,4 @@
-app.controller('TeacherRegisterController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory, $httpParamSerializer, serverConfig, ApiService) {
+app.controller('TeacherRegisterController', function ($scope, $rootScope, $state, $http, $ionicLoading,$ionicHistory, $httpParamSerializer, serverConfig, ApiService, toaster) {
   var vm = this;
 
   function initData() {
@@ -8,7 +8,13 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
 
     vm.country_list = ApiService.getCountryList();
     if( vm.country_list.length > 0 )
-      vm.country_id = vm.country_list[0].State_ID;
+      vm.country_id = vm.country_list[0].Country_ID;
+
+    vm.school_list = ApiService.getSchoolList();
+    if( vm.school_list.length > 0 )
+      vm.school_id = vm.school_list[0].School_ID;
+
+    vm.accept_term = false;
   }
 
   initData();
@@ -18,14 +24,19 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
   };
 
   $scope.onClickRegister = function () {
+    if( vm.accept_term == false )
+    {
+      toaster.pop('error', 'Register', 'Please select Term & Conditions' );
+      return;
+    }
+
+
     $ionicLoading.show({
       template: "Loading..."
     });
 
     var data = {};
 
-    data.api_login_key = serverConfig.api_login_key;
-    data.register_as = 'school';
     data.school_id = vm.school_id;
     data.full_name = vm.full_name;
     data.address = vm.address;
@@ -38,16 +49,14 @@ app.controller('TeacherRegisterController', function ($scope, $rootScope, $state
     data.username = vm.username;
     data.password = vm.password;
 
-    var param = $httpParamSerializer(data);
-
-    $http.get(serverConfig.url + 'api_register.aspx?' + param)
+    ApiService.register('teacher', data)
       .then(function(response) {
-        $scope.onSelectTicket(response.data);
+        console.log(response.data);
       }).catch(function(response) {
         console.error('Gists error', response.status, response.data);
       })
       .finally(function() {
-
+        $ionicLoading.hide();
       });
   }
 

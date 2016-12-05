@@ -9,10 +9,7 @@
     <div class="text-center" style="margin-top: 40px">
       <div class="div_center" style="width: 80%">
         <div class="row margin-top">
-          <select class='form-control' ng-model="vm.school_id">
-            <option value="">School</option>
-            <option>Cambridge</option>
-            <option>Carmel</option>
+          <select class='form-control' ng-model="vm.school_id" ng-options="value.School_ID as value.School_Name for (key, value) in vm.school_list">
           </select>
         </div>
 
@@ -39,7 +36,7 @@
             <input class="form-control input-sm" placeholder="Zip">
           </div>
           <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="vm.country_id" ng-options="value.Country as value.Country_Name for (key, value) in vm.country_list">
+            <select class='form-control input-sm' ng-model="vm.country_id" ng-options="value.Country_ID as value.Country_Name for (key, value) in vm.country_list">
             </select>
           </div>
         </div>
@@ -54,14 +51,14 @@
           <input class="form-control input-sm margin-top" ng-model="vm.username" placeholder="User Name">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Password">
+          <input class="form-control input-sm margin-top" ng-model="vm.password" placeholder="Password">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Re-Enter Password">
+          <input class="form-control input-sm margin-top" ng-model="vm.re_password" placeholder="Re-Enter Password">
         </div>
 
         <label class="md-check text-white" style="margin-top: 7px; text-align: left">
-          <input type="checkbox" >
+          <input type="checkbox" ng-model="vm.accept_term" >
           <i class="green"></i>
           I accept Term & Conditions
         </label>
