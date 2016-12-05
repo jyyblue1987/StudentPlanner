@@ -5,82 +5,72 @@
   </div>
   <ion-content class="has-header" on-swipe-right="myGoBack()">
     <h4 class="text-white text-center" style="margin-top: 30px">REGISTER AS TEACHER</h4>
-
-    <div class="text-center" style="margin-top: 40px">
-      <div class="div_center" style="width: 80%">
-        <div class="row margin-top">
-          <h6 class="text-white" style="text-align: left">ID No. 1234</h6>
-        </div>
-        <div class="row margin-top">
-          <select class='form-control' ng-model="report_type">
-            <option value="">School</option>
-            <option>Cambridge</option>
-            <option>Carmel</option>
-          </select>
-        </div>
-
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Full Name">
-        </div>
-
-        <div class="row margin-top">
-          <textarea class="form-control input-sm margin-top" placeholder="Address"></textarea>
-        </div>
-
-        <div class="row margin-top" style="margin-top: 0px">
-          <div class="col-50" style="padding-left: 0px; padding-right: 3px">
-            <input class="form-control input-sm" placeholder="City">
-          </div>
-          <div class="col-50" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="report_type">
-              <option value="">State</option>
-              <option>Kamataka</option>
-              <option>Andra Pradesh</option>
+    <form class="form-validation" ng-submit="onClickRegister()">
+      <div class="text-center" style="margin-top: 40px">
+        <div class="div_center" style="width: 80%">
+          <div class="row margin-top">
+            <select class='form-control' ng-model="vm.school_id" ng-options="value.School_ID as value.School_Name for (key, value) in vm.school_list">
             </select>
           </div>
-        </div>
 
-        <div class="row margin-top">
-          <div class="col-xs-6 margin-top" style="padding-left: 0px; padding-right: 3px">
-            <input class="form-control input-sm" placeholder="Zip">
+          <div class="row margin-top">
+            <input class="form-control input-sm margin-top" ng-model="vm.full_name" placeholder="Full Name" required>
           </div>
-          <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="report_type">
-              <option value="">Country</option>
-              <option>USA</option>
-            </select>
+
+          <div class="row margin-top">
+            <textarea class="form-control input-sm margin-top" ng-model="vm.address" placeholder="Address"></textarea>
           </div>
+
+          <div class="row margin-top" style="margin-top: 0px">
+            <div class="col-50" style="padding-left: 0px; padding-right: 3px">
+              <input class="form-control input-sm" ng-model="vm.city" placeholder="City">
+            </div>
+            <div class="col-50" style="padding-left: 3px; padding-right: 0px" >
+              <select class='form-control input-sm' ng-model="vm.state_id" ng-options="value.State_ID as value.State_Name for (key, value) in vm.state_list">
+              </select>
+            </div>
+          </div>
+
+          <div class="row margin-top">
+            <div class="col-xs-6 margin-top" style="padding-left: 0px; padding-right: 3px">
+              <input class="form-control input-sm" placeholder="Zip">
+            </div>
+            <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
+              <select class='form-control input-sm' ng-model="vm.country_id" ng-options="value.Country_ID as value.Country_Name for (key, value) in vm.country_list">
+              </select>
+            </div>
+          </div>
+
+          <div class="row margin-top">
+            <input class="form-control input-sm margin-top" ng-model="vm.phone_no" placeholder="Phone #">
+          </div>
+          <div class="row margin-top">
+            <input class="form-control input-sm margin-top" ng-model="vm.email_id" placeholder="Email ID">
+          </div>
+          <div class="row margin-top">
+            <input class="form-control input-sm margin-top" ng-model="vm.username" placeholder="User Name">
+          </div>
+          <div class="row margin-top">
+            <input type="password" class="form-control input-sm margin-top" ng-model="vm.password" placeholder="Password">
+          </div>
+          <div class="row margin-top">
+            <input type="password" class="form-control input-sm margin-top" ng-model="vm.re_password" placeholder="Re-Enter Password">
+          </div>
+
+          <label class="md-check text-white" style="margin-top: 7px; text-align: left">
+            <input type="checkbox" ng-model="vm.accept_term" >
+            <i class="green"></i>
+            I accept Term & Conditions
+          </label>
         </div>
 
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Phone #">
+        <div class="div_center" style="width: 50%; ; margin-top: 20px" >
+          <button type="submit" class="button button-calm button-small" style="display: block; width: 100%">
+            Register
+          </button>
         </div>
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Email ID">
-        </div>
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="User Name">
-        </div>
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Password">
-        </div>
-        <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Re-Enter Password">
-        </div>
-
-        <label class="md-check text-white" style="margin-top: 7px; text-align: left">
-          <input type="checkbox" >
-          <i class="green"></i>
-          I accept Term & Conditions
-        </label>
       </div>
-
-      <div class="div_center" style="width: 50%; ; margin-top: 20px" >
-        <button class="button button-calm button-small" ng-click="onClickRegister()" style="display: block; width: 100%">
-          Register
-        </button>
-      </div>
-    </div>
+    </form>
 
   </ion-content>
 </ion-view>

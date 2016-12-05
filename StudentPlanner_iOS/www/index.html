@@ -36,9 +36,15 @@
     <script src="lib/ion-datetime-picker/release/ion-datetime-picker.min.js"></script>
     <link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
 
+    <link href="lib/angularjs-toaster/toaster.css" rel="stylesheet">
+    <script src="lib/angularjs-toaster/toaster.js"></script>
+
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/services/api.service.js"></script>
+    <script src="js/services/auth.service.js"></script>
+    <script src="js/app.config.js"></script>
     <script src="js/router.config.js"></script>
     <script src="js/pages/home.ctrl.js"></script>
     <script src="js/pages/login.ctrl.js"></script>
@@ -96,6 +102,7 @@
 
   </head>
   <body ng-app="app"  class="platform-ios platform-cordova platform-webview" >
+    <toaster-container style="font-size: 17px" toaster-options="{'position-class': 'toast-center', 'time-out': 2000, 'close-button':false}"></toaster-container>
     <ion-nav-view class="nav-default"></ion-nav-view>
   </body>
 </html>
