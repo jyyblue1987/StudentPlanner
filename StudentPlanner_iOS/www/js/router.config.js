@@ -9,7 +9,7 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('teacher_register', { url: '/teacher/register', templateUrl: 'templates/register.html', controller: 'TeacherRegisterController as vm'})
       .state('teacher_menu', { url: '/teacher/menu', templateUrl: 'templates/menu.html', controller: 'TeacherMenuController as vm'})
 
-      .state('managesubject', { url: '/managesubject', templateUrl: 'templates/manage_subject.html', controller: 'ManageSubjectController as vm'})
+      .state('teacher_subject_list', { url: '/teacher_subject_list', templateUrl: 'templates/teacher/subject_list.html', controller: 'TeacherSubjectListController as vm'})
       .state('subject_add', { url: '/subject_add', templateUrl: 'templates/subject_add.html', controller: 'SubjectAddController as vm'})
       .state('subject_edit', { url: '/subject_edit', templateUrl: 'templates/subject_edit.html', controller: 'SubjectEditController as vm'})
 
