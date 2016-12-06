@@ -1,4 +1,4 @@
-app.controller('HomeController', function ($scope, $rootScope, $state, $http, $ionicLoading) {
+app.controller('HomeController', function ($scope, $rootScope, $state, $http, $ionicLoading, $ionicHistory) {
   var vm = this;
 
   $scope.tab = 'Login';

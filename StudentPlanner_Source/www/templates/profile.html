@@ -12,63 +12,55 @@
     <div class="text-center" style="margin-top: 10px">
       <div class="div_center" style="width: 80%">
         <div class="row margin-top">
-          <h6 class="text-white" style="text-align: left; margin-left: 4px">ID No. 1234</h6>
+          <h6 class="text-white" style="text-align: left; margin-left: 4px">ID No. {{vm.profile.member_id}}</h6>
         </div>
         <div class="row margin-top">
-          <select class='form-control' ng-model="report_type">
-            <option value="">School</option>
-            <option>Cambridge</option>
-            <option>Carmel</option>
+          <select class='form-control' ng-model="vm.profile.school_id" ng-options="value.School_ID as value.School_Name for (key, value) in vm.school_list">
           </select>
         </div>
 
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Full Name">
+          <input class="form-control input-sm margin-top" ng-model="vm.profile.full_name" placeholder="Full Name">
         </div>
 
         <div class="row margin-top">
-          <textarea class="form-control input-sm margin-top" placeholder="Address"></textarea>
+          <textarea class="form-control input-sm margin-top" ng-model="vm.profile.address" placeholder="Address"></textarea>
         </div>
 
         <div class="row margin-top" style="margin-top: 0px">
           <div class="col-50" style="padding-left: 0px; padding-right: 3px">
-            <input class="form-control input-sm" placeholder="City">
+            <input class="form-control input-sm" ng-model="vm.profile.city" placeholder="City">
           </div>
           <div class="col-50" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="report_type">
-              <option value="">State</option>
-              <option>Kamataka</option>
-              <option>Andra Pradesh</option>
+            <select class='form-control input-sm' ng-model="vm.profile.state_id" ng-options="value.State_ID as value.State_Name for (key, value) in vm.state_list">
             </select>
           </div>
         </div>
 
         <div class="row margin-top">
           <div class="col-xs-6 margin-top" style="padding-left: 0px; padding-right: 3px">
-            <input class="form-control input-sm" placeholder="Zip">
+            <input class="form-control input-sm" ng-model="vm.profile.zipcode" placeholder="Zip">
           </div>
           <div class="col-xs-6 margin-top" style="padding-left: 3px; padding-right: 0px" >
-            <select class='form-control input-sm' ng-model="report_type">
-              <option value="">Country</option>
-              <option>USA</option>
+            <select class='form-control input-sm' ng-model="vm.profile.country_id" ng-options="value.Country_ID as value.Country_Name for (key, value) in vm.country_list">
             </select>
           </div>
         </div>
 
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Phone #">
+          <input class="form-control input-sm margin-top" ng-model="vm.profile.phone" placeholder="Phone #">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Email ID">
+          <input class="form-control input-sm margin-top" ng-model="vm.profile.email" placeholder="Email ID">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="User Name">
+          <input class="form-control input-sm margin-top" ng-model="vm.profile.username" placeholder="User Name">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Password">
+          <input type="password" class="form-control input-sm margin-top" ng-model="vm.profile.password" placeholder="Password">
         </div>
         <div class="row margin-top">
-          <input class="form-control input-sm margin-top" placeholder="Re-Enter Password">
+          <input type="password" class="form-control input-sm margin-top" ng-model="vm.profile.re_password"  placeholder="Re-Enter Password">
         </div>
       </div>
 

@@ -90,4 +90,18 @@ app.service('ApiService', function ($http, $httpParamSerializer, serverConfig) {
 
   this.school_list = [];
 
+  this.getProfile = function(member_id) {
+
+    var data = {};
+
+    data.api_login_key = serverConfig.api_login_key;
+    data.member_id = member_id;
+
+    var param = $httpParamSerializer(data);
+
+    var promiss = $http.get(serverConfig.url + 'api_profile_view.aspx?' + param);
+
+    return promiss;
+  }
+
 });
