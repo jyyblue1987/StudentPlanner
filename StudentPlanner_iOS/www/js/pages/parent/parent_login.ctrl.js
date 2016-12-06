@@ -5,8 +5,10 @@ app.controller('ParentLoginController', function ($scope, $rootScope, $state, $h
   };
 
   function initData() {
-    vm.email_id = 'parent2@ebaraha.com';
-    vm.password = 'password';
+    //vm.email_id = 'student2@ebaraha.com';
+    //vm.password = 'password';
+    vm.email_id = '';
+    vm.password = '';
   }
 
   initData();
