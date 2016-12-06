@@ -2,12 +2,11 @@
 
 html {
   background-color: #fff;
-  font-family: "Titillium Web";
+  font-family: "FontAwesome";
 }
 
 body {
-  font-family: "Titillium Web";
-  font-size: .85vw;
+  font-family: "FontAwesome";
   -webkit-font-smoothing: antialiased;
   line-height: 1.42857143;
   color: #58666e;
@@ -25,19 +24,6 @@ body {
 #left:hover {
     opacity: 1; /* css standard */
     filter: alpha(opacity=100); /* internet explorer */
-}
-
-.pdf {
-
-  font-family: "Titillium Web";
-  src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(../public/frontpage/fonts/titillium/Titillium-Regular.woff)format('woff');
-  font-size: 12px;
-
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.42857143;
-  color: red;
-  /*background-color: #EEEEEE;*/
-
 }
 
 .h1,
