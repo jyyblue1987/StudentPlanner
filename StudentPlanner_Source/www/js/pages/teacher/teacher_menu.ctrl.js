@@ -20,7 +20,7 @@ app.controller('TeacherMenuController', function ($scope, $rootScope, $state, $h
 
     if( menu == 'Manage Student' )
     {
-      $state.go('student_list');
+      $state.go('teacher_student_list');
     }
 
     if( menu == 'Manage Homework' )

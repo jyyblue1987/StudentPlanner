@@ -14,9 +14,9 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('teacher_subject_edit', { url: '/teacher/subject/edit', templateUrl: 'templates/subject_edit.html', controller: 'SubjectEditController as vm',
                                 params: { param: '', }})
 
-      .state('student_list', { url: '/student_list', templateUrl: 'templates/item_list.html', controller: 'StudentListController as vm'})
-      .state('student_add', { url: '/student_add', templateUrl: 'templates/student_add.html', controller: 'StudentAddController as vm'})
-      .state('student_edit', { url: '/student_edit', templateUrl: 'templates/student_edit.html', controller: 'StudentEditController as vm'})
+      .state('teacher_student_list', { url: '/teacher/student/list', templateUrl: 'templates/item_list.html', controller: 'StudentListController as vm'})
+      .state('teacher_student_add', { url: '/teacher/student/add', templateUrl: 'templates/student_add.html', controller: 'StudentAddController as vm'})
+      .state('teacher_student_edit', { url: '/teacher/student/edit', templateUrl: 'templates/student_edit.html', controller: 'StudentEditController as vm'})
 
       .state('homework_list', { url: '/homework_list', templateUrl: 'templates/homework_list.html', controller: 'HomeworkListController as vm'})
       .state('homework_add', { url: '/homework_add', templateUrl: 'templates/homework_add.html', controller: 'HomeworkAddController as vm'})
