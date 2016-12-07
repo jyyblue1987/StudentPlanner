@@ -12,27 +12,15 @@
     <div class="text-center" style="margin-top: 10px">
       <div class="div_center" style="width: 80%">
         <div class="row margin-top">
-          <select class='form-control' ng-model="report_type">
-            <option value="">Class</option>
-            <option>1th Class</option>
-            <option>2th Class</option>
-            <option>3th Class</option>
+          <select class='form-control' ng-model="vm.subject_data.class_id" ng-options="value.Class_ID as value.Class_Name for (key, value) in vm.class_list">
           </select>
         </div>
         <div class="row margin-top" style="margin-top: 0px">
-          <select class='form-control' ng-model="report_type">
-            <option value="">Identifier</option>
-            <option>Blue</option>
-            <option>Green</option>
-            <option>Red</option>
+          <select class='form-control' ng-model="vm.subject_data.identifier_id" ng-options="value.Identifier_ID as value.Identifier_Name for (key, value) in vm.identifier_list">
           </select>
         </div>
         <div class="row margin-top" style="margin-top: 0px">
-          <select class='form-control' ng-model="report_type">
-            <option value="">Subject</option>
-            <option>English</option>
-            <option>Maths</option>
-            <option>Science</option>
+          <select class='form-control' ng-model="vm.subject_data.subject_id" ng-options="value.Subject_ID as value.Subject_Name for (key, value) in vm.subject_list">
           </select>
         </div>
       </div>

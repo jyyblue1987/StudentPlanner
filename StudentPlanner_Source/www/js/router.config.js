@@ -9,9 +9,10 @@ app.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
       .state('teacher_register', { url: '/teacher/register', templateUrl: 'templates/register.html', controller: 'TeacherRegisterController as vm'})
       .state('teacher_menu', { url: '/teacher/menu', templateUrl: 'templates/menu.html', controller: 'TeacherMenuController as vm'})
 
-      .state('teacher_subject_list', { url: '/teacher_subject_list', templateUrl: 'templates/teacher/subject_list.html', controller: 'TeacherSubjectListController as vm'})
-      .state('subject_add', { url: '/subject_add', templateUrl: 'templates/subject_add.html', controller: 'SubjectAddController as vm'})
-      .state('subject_edit', { url: '/subject_edit', templateUrl: 'templates/subject_edit.html', controller: 'SubjectEditController as vm'})
+      .state('teacher_subject_list', { url: '/teacher/subject/list', templateUrl: 'templates/teacher/subject_list.html', controller: 'TeacherSubjectListController as vm'})
+      .state('teacher_subject_add', { url: '/teacher/subject/add', templateUrl: 'templates/subject_add.html', controller: 'SubjectAddController as vm'})
+      .state('teacher_subject_edit', { url: '/teacher/subject/edit', templateUrl: 'templates/subject_edit.html', controller: 'SubjectEditController as vm',
+                                params: { param: '', }})
 
       .state('student_list', { url: '/student_list', templateUrl: 'templates/item_list.html', controller: 'StudentListController as vm'})
       .state('student_add', { url: '/student_add', templateUrl: 'templates/student_add.html', controller: 'StudentAddController as vm'})

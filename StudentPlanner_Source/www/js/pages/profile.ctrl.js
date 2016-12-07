@@ -11,7 +11,9 @@ app.controller('ProfileController', function ($scope, $rootScope, $state, $http,
 
   function initData() {
     vm.profile = {};
-    
+
+    $scope.message = '';
+
     vm.state_list = ApiService.getStateList();
     vm.country_list = ApiService.getCountryList();
     vm.school_list = ApiService.getSchoolList();
@@ -48,9 +50,28 @@ app.controller('ProfileController', function ($scope, $rootScope, $state, $http,
   }
 
   $scope.title = 'PROFILE';
-  $scope.message = '';
 
   $scope.onClickUpdate = function() {
-    $scope.message = 'Your profile is successfully updated';
+    $ionicLoading.show({
+      template: "Loading..."
+    });
+
+    ApiService.updateProfile(vm.profile)
+      .then(function(response) {
+        console.log(response.data);
+        var data = response.data;
+        if( data.success == 1 )
+        {
+          $scope.message = 'Your profile is successfully updated';
+        }
+        else
+          toaster.pop('error', 'Profile', 'There is no Profile' );
+
+      }).catch(function(response) {
+        console.error('Gists error', response.status, response.data);
+      })
+      .finally(function() {
+        $ionicLoading.hide();
+      });
   }
 });

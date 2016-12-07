@@ -3,6 +3,10 @@ app.controller('TeacherSubjectListController', function ($scope, $rootScope, $st
     $ionicHistory.goBack();
   };
 
+  $scope.$on('$ionicView.beforeEnter', function() {
+    initData();
+  });
+
   function initData() {
     $scope.title = 'MANAGE SUBJECT';
 
@@ -32,11 +36,7 @@ app.controller('TeacherSubjectListController', function ($scope, $rootScope, $st
       .finally(function() {
         $ionicLoading.hide();
       });
-
   }
-
-  initData();
-
 
   $scope.onClickLogout = function() {
     $state.go('home');
@@ -44,8 +44,8 @@ app.controller('TeacherSubjectListController', function ($scope, $rootScope, $st
 
   $scope.message = '';
 
-  $scope.onClickEdit = function() {
-    $state.go('subject_edit');
+  $scope.onClickEdit = function(row) {
+    $state.go('teacher_subject_edit', {param: row});
   }
 
   $scope.onClickRemove = function($index) {
@@ -53,6 +53,6 @@ app.controller('TeacherSubjectListController', function ($scope, $rootScope, $st
   }
 
   $scope.onClickAdd = function() {
-    $state.go('subject_add');
+    $state.go('teacher_subject_add');
   }
 });

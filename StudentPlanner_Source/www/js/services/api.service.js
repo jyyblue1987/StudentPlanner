@@ -104,4 +104,30 @@ app.service('ApiService', function ($http, $httpParamSerializer, serverConfig) {
     return promiss;
   }
 
+  this.updateProfile = function(info) {
+    var data = angular.copy(info);
+
+    data.api_login_key = serverConfig.api_login_key;
+    data.phone_no = info.phone;
+    data.email_id = info.email;
+
+    var param = $httpParamSerializer(data);
+
+    var promiss = $http.get(serverConfig.url + 'api_profile.aspx?' + param);
+
+    return promiss;
+  }
+
+  this.updateSubject = function(info) {
+    var data = angular.copy(info);
+
+    data.api_login_key = serverConfig.api_login_key;
+
+    var param = $httpParamSerializer(data);
+
+    var promiss = $http.get(serverConfig.url + 'api_manage_subject.aspx?' + param);
+
+    return promiss;
+  }
+
 });
