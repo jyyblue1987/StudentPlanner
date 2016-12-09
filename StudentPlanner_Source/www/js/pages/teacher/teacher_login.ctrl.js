@@ -5,10 +5,10 @@ app.controller('TeacherLoginController', function ($scope, $rootScope, $state, $
   };
 
   function initData() {
-    //vm.email_id = 'student2@ebaraha.com';
-    //vm.password = 'password';
-    vm.email_id = '';
-    vm.password = '';
+    vm.email_id = 'teacher2@ebaraha.com';
+    vm.password = 'password';
+    //vm.email_id = '';
+    //vm.password = '';
   }
 
   initData();
